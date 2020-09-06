@@ -91,8 +91,10 @@ include vendor/cm/config/twrp.mk
 endif
 
 # Bootanimation
-PRODUCT_PACKAGES += \
-    bootanimation.zip
+#PRODUCT_PACKAGES += \
+#    bootanimation.zip
+PRODUCT_COPY_FILES += \
+        vendor/cm/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -101,7 +103,8 @@ PRODUCT_PACKAGES += \
     CMParts \
     Development \
     Profiles \
-    WeatherManagerService
+    WeatherManagerService \
+    OmniStyle
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
